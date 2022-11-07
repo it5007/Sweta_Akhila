@@ -12,37 +12,27 @@
 /* global db print */
 /* eslint no-restricted-globals: "off" */
 
-db.issues.remove({});
+db.vannerusers.remove({});
+/*
+const initialusers = [
+    {
+      id: 1, name: 'Jack', phone: 88885555,
+      bookingTime: new Date()
+    },
+    {
+      id: 2, name: 'Rose', phone: 88884444,
+      bookingTime: new Date()
+    },
+  ];
+db.vannerusers.insertMany(initialusers);
+const count = db.vannerusers.count();
+print('Inserted', count, 'Users');
+*/
+const count = 0 ;
+db.counters.remove({ _id: 'fixedindex' });
+db.counters.insert({ _id: 'fixedindex', current: count });
 
-const issuesDB = [
-  {
-    id: 1,
-    status: 'New',
-    owner: 'Ravan',
-    effort: 5,
-    created: new Date('2019-01-15'),
-    due: undefined,
-    title: 'Error in console when clicking Add',
-  },
-  {
-    id: 2,
-    status: 'Assigned',
-    owner: 'Eddie',
-    effort: 14,
-    created: new Date('2019-01-16'),
-    due: new Date('2019-02-01'),
-    title: 'Missing bottom border on panel',
-  },
-];
-
-db.issues.insertMany(issuesDB);
-const count = db.issues.count();
-print('Inserted', count, 'issues');
-
-db.counters.remove({ _id: 'issues' });
-db.counters.insert({ _id: 'issues', current: count });
-
-db.issues.createIndex({ id: 1 }, { unique: true });
-db.issues.createIndex({ status: 1 });
-db.issues.createIndex({ owner: 1 });
-db.issues.createIndex({ created: 1 });
+db.vannerusers.createIndex({ id: 1 }, { unique: true });
+db.vannerusers.createIndex({ name: 1 });
+db.vannerusers.createIndex({ token: 1 });
+db.vannerusers.createIndex({ bookingTime: 1 });
