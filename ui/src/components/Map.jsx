@@ -4,6 +4,8 @@ import {
   GoogleMap,
   DirectionsRenderer
 } from '@react-google-maps/api';
+import './Map.css';
+
 
 export default class Map extends Component {
   state = {
@@ -85,7 +87,7 @@ export default class Map extends Component {
         showWaypoint: true
       })
     }
-    console.log("Chnaged" + event.target.value)
+    console.log("Changed" + event.target.value)
     // simulate clicking Go
     this.handleChange();
   };
@@ -126,7 +128,7 @@ export default class Map extends Component {
     <GoogleMap
       center={{ lat: 40.756795, lng: -73.954298 }}
       zoom={5}
-      mapContainerStyle={{ height: "400px", width: "800px" }}
+      mapContainerStyle={{ height: "400px", width: "100%" }}
     >
       <DirectionsRenderer
         directions={this.state.directions}
@@ -140,7 +142,7 @@ export default class Map extends Component {
       
       <div>
         <div id="floating-panel">
-        <b>Mode of Travel: </b>
+        <h6>Mode of transit:  </h6>
         <select id="mode" onChange={this.handleChangeMode}>
           <option value="DRIVING">Driving</option>
           <option value="WALKING">Walking</option>
@@ -154,8 +156,8 @@ export default class Map extends Component {
         <button onClick={this.handleChange}>Go</button>
       </div>
         <GoogleMapExample
-          containerElement={<div style={{ height: `500px`, width: '500px' }} />}
-          mapElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%`, width: '100%' }} />}
+          mapElement={<div style={{ height: `100%`, width:'100%' }} />}
         />
         
       </div>

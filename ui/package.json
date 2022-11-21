@@ -17,6 +17,11 @@
   "license": "ISC",
   "homepage": "https://github.com/vasansr/pro-mern-stack-2",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
+    "@mui/styled-engine": "^5.10.14",
     "@react-google-maps/api": "^2.16.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.6.2",

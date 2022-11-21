@@ -1,21 +1,24 @@
 import '../../css/App.css';
 import Map from './Map.jsx';
+import Footer from './Footer.jsx';
 import { useLoadScript } from "@react-google-maps/api";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default function UseMap() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "YOUR-GOOGLE-API-KEY",
+    googleMapsApiKey: "API-KEY",
   })
 
   const  loadedsuccess = <>
     <div className="App">
-        <p>"Loading Success"</p>
         <div>
             <Map />
         </div>
         <div id="directions-panel"></div>
+        <div>
+        <Footer />
+        </div>
     </div> </> ;
 
   const  loadedfail = <>

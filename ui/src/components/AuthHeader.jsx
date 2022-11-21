@@ -1,6 +1,7 @@
 import React , {useEffect, useState} from 'react';
 import { GoogleLogin , GoogleLogout } from 'react-google-login';
 import { gapi} from 'gapi-script';
+import './AuthHeader.css';
 
 const dateRegex = new RegExp('^\\d\\d\\d\\d-\\d\\d-\\d\\d');
 function jsonDateReviver(key, value) {

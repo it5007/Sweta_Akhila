@@ -7,28 +7,27 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 import AuthHeader from './components/AuthHeader.jsx'
 import BackgroundImage from './components/BackgroundImage.jsx';
-import VannerTask from './components/VannerTask.jsx';
-import Footer from './components/Footer.jsx';
 import UseMap from './components/UseMap.jsx';
-import Geolocation from './components/Geolocation.jsx';
+import ThingsToDo from './components/ThingsToDo.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar.jsx"
 
-/**const element = (
-        <>
-        <UseMap />
-        </>
-);*/
 
-const element = (
-    <>
-    {/**<Geolocation/>**/}
-    <AuthHeader/>
-    <UseMap />
-    <BackgroundImage />
-    <VannerTask/>
-    {/**<Footer/>**/}
-    </>
+
+const elem = (
+<>
+<Router>
+  <Navbar />
+  <Routes>
+    <Route path='/' exact element={<BackgroundImage />}  />
+    <Route path='/ThingsToDo' element={<ThingsToDo />} />
+    <Route path='/FindMyWay' element = {<UseMap />} />
+  </Routes>
+</Router>
+</>
 );
 
-ReactDOM.render(element, document.getElementById('contents'));
+
+ReactDOM.render(elem, document.getElementById('contents'));
 
 

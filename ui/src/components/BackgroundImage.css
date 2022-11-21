@@ -1,0 +1,10 @@
+.text-white{
+    
+    float:left;
+    width:100%;
+}
+.text{
+    
+    float:left;
+    text-decoration-color: white;
+}

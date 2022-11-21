@@ -1,23 +1,25 @@
+import styles from './Footer.css';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-export default  class VannerTask extends React.Component {
-  render() {
-    
-    return (
-      <div class="btn-toolbar mb-5" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group col-4" role="group" aria-label="First group">
-        <a href="#" >Help & Contact</a>
-        </div>
-        <div class="btn-group col-3" role="group" aria-label="Second group">
-        <a href="#" >Copyright</a>
-        </div>
-        <div class="btn-group col-3" role="group" aria-label="Third group">
-        <a href="#" >Social Media</a>
-        </div>
-        <div class="btn-group col-2" role="group" aria-label="Fourth group">
-        <a href="#" >Terms & Conditions</a>
-        </div>
-    </div>      
-      );
-    }
+function Footer(){
+
+    return(
+        <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a target="_blank" href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
+                <a target="_blank" href="https://www.twitter.com/"><i class="icon ion-social-twitter"></i></a>
+                <a target="_blank" href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Home</a></li>
+                    <li class="list-inline-item"><a href="mailto:support@vannerplanner.com">Contact</a></li>
+                    <li class="list-inline-item"><a href="#">Terms and Conditions</a></li>
+                </ul>
+                <p class="copyright">VannerPlanner © 2022</p>
+        </footer>
+    </div>
+    );
 }
+
+export default Footer;
