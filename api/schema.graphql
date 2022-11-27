@@ -1,0 +1,22 @@
+scalar GraphQLDate
+
+type User {
+	_id: ID!
+	id: Int!
+	name: String!
+	token: Int!
+	loginTime: GraphQLDate!
+}
+
+input InputUser {
+	name: String!
+	token: String!
+}
+
+type Query {
+	listUser:[User]!
+}
+
+type Mutation {
+  addUser(user: InputUser!): User
+}

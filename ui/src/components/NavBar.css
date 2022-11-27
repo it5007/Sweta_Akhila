@@ -1,0 +1,13 @@
+#navbar{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor:pointer;
+    background-color:gold;
+    color:black;
+    height:100%;
+    float:left;
+    width:20%;
+    position: relative;
+    
+    transition:0.3s;
+}
