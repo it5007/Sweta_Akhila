@@ -39,7 +39,7 @@ async function graphQLFetch(query, variables = {}) {
 
 export default function AuthHeader(){
 
-    const clientId="559196906501-bqac4bfhiuakmnp53csn2m4epfm1eo6v.apps.googleusercontent.com";
+    const clientId="YOUR-AUTH-API-KEY";
     useEffect( () => {
         gapi.load("client:auth2",()=> {
             gapi.auth2.init({clientId:clientId})

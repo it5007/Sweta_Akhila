@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 export default function UseMap() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDRcOrqy5xvW8gzUwva11JsIPx3UwjiHB4",
+    googleMapsApiKey: "YOUR-API-KEY",
   })
 
   const  loadedsuccess = <>
