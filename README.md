@@ -21,6 +21,6 @@ their sources and other useful information can be found in the
 * npm install
 * Add Keys to GoogleMapsAPI and OAUTHAPI key in src/components/UseMap.jsx and src/components/AuthHeader.jsx
 * npm run compile
-* screen npm start (http://localhost:8000/) - API Server
+* screen npm start (http://localhost:8000/) - UI Server
 * Open http://localhost:8000/ . 
 * All files that are currently in repo are being used.   
